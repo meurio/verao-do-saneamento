@@ -52,6 +52,7 @@ group :test do
   gem 'database_cleaner'
   gem 'machinist', '>= 2.0.0.beta2'
   gem 'faker'
+  gem 'selenium-webdriver'
 end
 
 gem 'slim-rails'

@@ -15,5 +15,6 @@ end
 def to_element string
   return "form.new_user" if string == "the support form"
   return ".taf" if string == "the tell a friend copy"
+  return "small.error" if string == "an error in the first name field"
   raise "I don't know what '#{string}' means"
 end

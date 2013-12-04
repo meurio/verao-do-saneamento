@@ -11,5 +11,13 @@ Feature: support mobilization
     And I should see "the tell a friend copy"
     And I should receive an email
 
+  @javascript
   Scenario: when I fill a invalid form
+    Given I'm in "the homepage"
+    When I submit "the support form"
+    Then I should see "an error in the first name field"
+    And I should see "an error in the last name field"
+    And I should see "an error in the email field"
+    And I should see "an error in the phone field"
+
   Scenario: when I already supported
