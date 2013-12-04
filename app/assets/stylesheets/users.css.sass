@@ -41,6 +41,7 @@ a.facebook_button, a.twitter_button
       font-family: "Proxima Nova"
   .map
     margin-top: 30px
+    margin-bottom: 30px
     +grid-column(12)
 
 .new_user_form
@@ -71,3 +72,7 @@ a.facebook_button, a.twitter_button
 .text
   margin-top: 20px
   +grid-column(12)
+
+@media #{$small-only}
+  .header_and_map, .new_user_form, .header, .vds_logo
+    +grid-column(12)

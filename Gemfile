@@ -57,6 +57,6 @@ end
 
 gem 'slim-rails'
 gem 'inherited_resources'
-gem 'zurb-foundation'
+gem 'foundation-rails'
 gem 'compass-rails', github: 'Compass/compass-rails', branch: 'rails4-hack'
 gem 'rails_12factor'
