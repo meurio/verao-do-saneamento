@@ -14,19 +14,23 @@
   
   .new_user_form
     .box
-      = form_for @user do |f|
-        p Metade dos cariocas ainda vive sem tratamento de esgoto. São quase 3 milhões de cidadãos em condições de vida precárias. Isso é muita gente sendo obrigada a beber água suja ou jogar esgoto diretamente em rios, lagoas e praias da cidade maravilhosa. 
-        p É por isso que estamos nos unindo para fazer deste verão o Verão do Saneamento. Nossa mobilização não sairá de pauta na estação mais quente da cidade e não vai dar mais para nos ignorar.
-        p Você também quer 100% de saneamento para o Rio? Apoie agora! Complete o formulário e nós te enviaremos um SMS te chamando para todas as ações do Verão do Saneamento. 
-        = f.label :first_name
-        = f.text_field :first_name
-        = f.label :last_name
-        = f.text_field :last_name
-        = f.label :email
-        = f.email_field :email
-        = f.label :phone
-        = f.text_field :phone
-        = f.submit "Quero apoiar!"
+      - if flash[:notice]
+        .taf
+          p Obrigado por se mobilizar por 100% de saneamento para o Rio! Juntos, podemos fazer deste verão o Verão do Saneamento. Participe das ações de rua e compartilhe essa mobilização com os seus amigos (share no twitter e FB)
+      - else
+        = form_for @user do |f|
+          p Metade dos cariocas ainda vive sem tratamento de esgoto. São quase 3 milhões de cidadãos em condições de vida precárias. Isso é muita gente sendo obrigada a beber água suja ou jogar esgoto diretamente em rios, lagoas e praias da cidade maravilhosa. 
+          p É por isso que estamos nos unindo para fazer deste verão o Verão do Saneamento. Nossa mobilização não sairá de pauta na estação mais quente da cidade e não vai dar mais para nos ignorar.
+          p Você também quer 100% de saneamento para o Rio? Apoie agora! Complete o formulário e nós te enviaremos um SMS te chamando para todas as ações do Verão do Saneamento. 
+          = f.label :first_name
+          = f.text_field :first_name
+          = f.label :last_name
+          = f.text_field :last_name
+          = f.label :email
+          = f.email_field :email
+          = f.label :phone
+          = f.text_field :phone
+          = f.submit "Quero apoiar!"
 
 .row
   .text
