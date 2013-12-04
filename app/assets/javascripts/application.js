@@ -14,8 +14,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require foundation
+//= require jquery.mask.min
 //= require_tree .
 
 $(function(){
   $(document).foundation();
+  $("#user_phone").mask('(00) 000000000');
 });
