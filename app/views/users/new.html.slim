@@ -4,11 +4,8 @@
       .vds_logo
         = image_tag "vds.png"
       .header
-        h1
-          | 3 meses de ação:
-          br
-          | Participe do Verão do Saneamento!
-        h1.subheader Nesse verão os cariocas estão organizando diversas ações, em toda a cidade, pedindo 100% de saneamento para o Rio. Veja no mapa quais são as mobilizações do Verão do Saneamento e participe!
+        h1 Estamos perdendo nossas praias para o esgoto!
+        h1.subheader Nesse verão, os cariocas estão organizando diversas ações, em toda a cidade, exigindo 100% de saneamento para o Rio. Veja as ações no mapa, participe de uma, ou crie a sua.
     .row
       .map
         iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://mapsengine.google.com/map/u/0/embed?mid=zV7GAzxvQdnE.kaK_rhNHWeFU&output=embed"
@@ -24,8 +21,6 @@
           p Participe das ações de rua e compartilhe essa mobilização com os seus amigos (share no twitter e FB)
       - else
         = form_for @user, validate: true do |f|
-          p Metade dos cariocas ainda vive sem tratamento de esgoto. São quase 3 milhões de cidadãos em condições de vida precárias. Isso é muita gente sendo obrigada a beber água suja ou jogar esgoto diretamente em rios, lagoas e praias da cidade maravilhosa. 
-          p É por isso que estamos nos unindo para fazer deste verão o Verão do Saneamento. Nossa mobilização não sairá de pauta na estação mais quente da cidade e não vai dar mais para nos ignorar.
           p Você também quer 100% de saneamento para o Rio? Apoie agora! Complete o formulário e nós te enviaremos um SMS te chamando para todas as ações do Verão do Saneamento. 
 
           .first_name_field
