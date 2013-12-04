@@ -44,11 +44,14 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
+  gem 'shoulda-matchers'
 end
 
 group :test do
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
+  gem 'machinist', '>= 2.0.0.beta2'
+  gem 'faker'
 end
 
 gem 'slim-rails'

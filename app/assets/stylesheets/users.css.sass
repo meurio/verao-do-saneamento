@@ -1,8 +1,10 @@
+$header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif
+
 @import foundation
 @import compass/css3
 
 body
-  background: yellow
+  background: asset-url("bg.jpg") center
   padding: 30px 0
 
 .row
@@ -17,12 +19,12 @@ body
   +grid-column(8)
   .vds_logo
     +grid-column(4)
-    img
-      height: 100px
-      background: gray
-      width: 100%
   .header
+    margin-bottom: 20px
     +grid-column(8)
+    h1.subheader
+      font-size: 20px
+      color: white
   .map
     +grid-column(12)
 
@@ -30,4 +32,5 @@ body
   +grid-column(4)
 
 .text
+  margin-top: 20px
   +grid-column(12)
