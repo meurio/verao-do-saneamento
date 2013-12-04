@@ -20,6 +20,11 @@ body
   padding: 20px
   +border-radius(20px)
 
+a.facebook_button, a.twitter_button
+  opacity: .9
+  &:hover
+    opacity: 1
+
 .header_and_map
   +grid-column(8)
   .vds_logo
@@ -56,6 +61,12 @@ body
       margin: 0
     .first_name_field, .last_name_field, .email_field, .phone_field
       margin-bottom: 20px
+  .taf
+    p
+      &:last-child
+        margin: 0
+    a.facebook_button
+      margin-right: 20px
 
 .text
   margin-top: 20px
