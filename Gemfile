@@ -45,5 +45,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
 end
 
-gem "slim-rails"
+gem 'slim-rails'
 gem 'inherited_resources'
+gem 'zurb-foundation'
+gem 'compass-rails', github: 'Compass/compass-rails', branch: 'rails4-hack'

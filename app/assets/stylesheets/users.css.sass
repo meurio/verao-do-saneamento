@@ -1,3 +1,33 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass here: http://sass-lang.com/
+@import foundation
+@import compass/css3
+
+body
+  background: yellow
+  padding: 30px 0
+
+.row
+  +grid-row
+
+.box
+  background: white
+  padding: 20px
+  +border-radius(20px)
+
+.header_and_map
+  +grid-column(8)
+  .vds_logo
+    +grid-column(4)
+    img
+      height: 100px
+      background: gray
+      width: 100%
+  .header
+    +grid-column(8)
+  .map
+    +grid-column(12)
+
+.new_user_form
+  +grid-column(4)
+
+.text
+  +grid-column(12)
