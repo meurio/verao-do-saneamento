@@ -77,4 +77,6 @@ VeraoDoSaneamento::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  GA.tracker = "UA-26278513-17"
 end
