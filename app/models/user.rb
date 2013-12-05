@@ -17,8 +17,9 @@ class User < ActiveRecord::Base
       Gibbon::API.lists.subscribe({
         :id => ENV['MAILCHIMP_LIST_ID'], 
         :email => { :email => self.email }, 
-        :merge_vars => { FNAME: self.name }, 
-        :double_optin => false
+        :merge_vars => { FNAME: self.first_name, LNAME: self.last_name }, 
+        :double_optin => false,
+        :update_existing => true
       })
 
       Gibbon::API.lists.static_segment_members_add({
