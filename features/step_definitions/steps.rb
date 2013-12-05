@@ -21,3 +21,7 @@ end
 Then(/^I should receive an email$/) do
   ActionMailer::Base.deliveries.should_not be_empty
 end
+
+Then(/^it should subscribed to MailChimp$/) do
+  expect(@gb_lists).to have_received(:subscribe)
+end
