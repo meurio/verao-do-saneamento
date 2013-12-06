@@ -48,7 +48,7 @@
 
           .phone_field
             = f.label :phone, class: @user.errors.include?(:phone) ? :error : nil
-            = f.phone_field :phone, class: @user.errors.include?(:phone) ? :error : nil
+            = f.phone_field :phone, placeholder: "(21) 994731730", class: @user.errors.include?(:phone) ? :error : nil
             - @user.errors.full_messages_for(:phone).each do |m|
               small.error= m
 
