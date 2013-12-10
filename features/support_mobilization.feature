@@ -10,6 +10,7 @@ Feature: support mobilization
     Then I should be in "the new user page"
     And I should see "the tell a friend copy"
     And I should receive an email
+    And it should subscribed to MailChimp
 
   Scenario: when I fill a invalid form
     Given I'm in "the homepage"

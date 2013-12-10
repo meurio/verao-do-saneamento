@@ -6,8 +6,21 @@ $header-font-family: "Populaire"
 
 body
   background: asset-url("bg.jpg") top center no-repeat #b88316
-  padding: 30px 0
+  padding: 0 0 30px 0
   font-family: "Proxima Nova"
+
+header
+  background: white
+  padding: 5px 0
+  color: #d1d3d4
+  font-family: 'Populaire'
+  font-size: 32px
+  line-height: 37px
+  margin-bottom: 30px
+  .meurio
+    +grid-column(12)
+    img
+      margin-right: 10px
 
 *
   outline: none
@@ -78,6 +91,6 @@ a.facebook_button, a.twitter_button
   margin-top: 20px
   +grid-column(12)
 
-@media #{$small-only}
+@media only screen and (max-width: 800px)
   .header_and_map, .new_user_form, .header, .vds_logo
     +grid-column(12)

@@ -5,7 +5,9 @@
         = image_tag "vds.png"
       .header
         h1 Estamos perdendo nossas praias para o esgoto!
-        h1.subheader Nesse verão, os cariocas estão organizando diversas ações, em toda a cidade, exigindo 100% de saneamento para o Rio. Veja as ações no mapa, participe de uma, ou crie a sua.
+        h1.subheader 
+          ' Nesse verão, os cariocas estão organizando diversas ações em toda a cidade, exigindo 100% de saneamento para o Rio. Veja as ações no mapa, participe de uma, ou 
+          = link_to 'crie a sua.', 'https://meuriopergunta.typeform.com/to/QaMxkH', target: :blank
     .row
       .map
         iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://mapsengine.google.com/map/u/0/embed?mid=zV7GAzxvQdnE.kaK_rhNHWeFU&output=embed"
@@ -27,7 +29,7 @@
             = link_to image_tag("twitter_button.png"), "https://twitter.com/share?url=#{root_url}&text=Um%20grupo%20de%20cariocas%20resolveu%20mudar%20o%20Rio%20neste%20ver%C3%A3o.%20Come%C3%A7ando%20pela%20sua%20praia.&hashtags=SaneamentoÉBásico", class: :twitter_button
       - else
         = form_for @user, validate: true do |f|
-          p Você também quer 100% de saneamento para o Rio? Apoie agora! Complete o formulário e nós te enviaremos um SMS te chamando para todas as ações do Verão do Saneamento. 
+          p Você sabia que o Rio já perdeu 20 praias para a poluição? Chegou a hora de dizer chega! Precisamos de milhares de cariocas para mostrar que saneamento é sim uma prioridade! Se inscreva para apoiar a mobilização e receber um SMS te chamando para as ações do Verão.
 
           .first_name_field
             = f.label :first_name, class: @user.errors.include?(:first_name) ? :error : nil
@@ -49,7 +51,7 @@
 
           .phone_field
             = f.label :phone, class: @user.errors.include?(:phone) ? :error : nil
-            = f.phone_field :phone, class: @user.errors.include?(:phone) ? :error : nil
+            = f.phone_field :phone, placeholder: "(21) 994731730", class: @user.errors.include?(:phone) ? :error : nil
             - @user.errors.full_messages_for(:phone).each do |m|
               small.error= m
 
