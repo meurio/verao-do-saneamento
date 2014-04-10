@@ -1,18 +1,4 @@
 / = render 'old_page'
 
-.slide-1
-  .row
-    .header
-      = link_to image_tag("meu-rio-logo.png"), "http://meurio.org.br/"
-      | Verão do Saneamento
-  .row
-    .content
-      .image= image_tag "vds.png"
-      .weeks
-        .number 12
-        .copy semanas
-      .views
-        .number 75
-        .copy aparições na mídia nacional e internacional
-  .row
-    .title-ribbon Veja como, na estação mais quente do ano, 1200 cariocas pautaram o cocô.
+= render 'slide_1'
+= render 'slide_2'
