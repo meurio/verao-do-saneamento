@@ -1,84 +1,18 @@
-.row
-  .header_and_map
-    .row
-      .vds_logo
-        = image_tag "vds.png"
-      .header
-        h1 Estamos perdendo nossas praias para o esgoto!
-        h1.subheader 
-          ' Nesse verão, os cariocas estão organizando diversas ações em toda a cidade, exigindo 100% de saneamento para o Rio. Veja as ações no mapa, participe de uma, ou 
-          = link_to 'crie a sua.', 'https://meuriopergunta.typeform.com/to/QaMxkH', target: :blank
-    .row
-      .share
-        = link_to image_tag("facebook_button.png"), "https://www.facebook.com/sharer/sharer.php?u=#{root_url}", class: :facebook_button
-        = link_to image_tag("twitter_button.png"), "https://twitter.com/share?url=#{root_url}&text=Um%20grupo%20de%20cariocas%20resolveu%20mudar%20o%20Rio%20neste%20ver%C3%A3o.%20Come%C3%A7ando%20pela%20sua%20praia.&hashtags=SaneamentoÉBásico", class: :twitter_button
-      .map
-        iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://mapsengine.google.com/map/u/0/embed?mid=zV7GAzxvQdnE.kaK_rhNHWeFU&output=embed"
-          small
-            a href="https://maps.google.com/?ie=UTF8&amp;ll=-22.954923,-43.187986&amp;spn=0.018257,0.046756&amp;t=m&amp;z=16&amp;source=embed" style="color:#0000FF;text-align:left" View Larger Map
-      .share
-        = link_to image_tag("facebook_button.png"), "https://www.facebook.com/sharer/sharer.php?u=#{root_url}", class: :facebook_button
-        = link_to image_tag("twitter_button.png"), "https://twitter.com/share?url=#{root_url}&text=Um%20grupo%20de%20cariocas%20resolveu%20mudar%20o%20Rio%20neste%20ver%C3%A3o.%20Come%C3%A7ando%20pela%20sua%20praia.&hashtags=SaneamentoÉBásico", class: :twitter_button
-  
-  .new_user_form
-    .box
-      - if flash[:notice]
-        .taf
-          p Obrigado por se mobilizar por 100% de saneamento para o Rio!
-          p Juntos, podemos fazer deste verão o Verão do Saneamento.
-          p Participe das ações de rua e compartilhe essa mobilização com os seus amigos.
-          p.text-center
-            = link_to image_tag("facebook_button.png"), "https://www.facebook.com/sharer/sharer.php?u=#{root_url}", class: :facebook_button
-            = link_to image_tag("twitter_button.png"), "https://twitter.com/share?url=#{root_url}&text=Um%20grupo%20de%20cariocas%20resolveu%20mudar%20o%20Rio%20neste%20ver%C3%A3o.%20Come%C3%A7ando%20pela%20sua%20praia.&hashtags=SaneamentoÉBásico", class: :twitter_button
-      - else
-        = form_for @user, validate: true do |f|
-          p Você sabia que o Rio já perdeu 20 praias para a poluição? Chegou a hora de dizer chega! Precisamos de milhares de cariocas para mostrar que saneamento é sim uma prioridade! Se inscreva para apoiar a mobilização e receber um SMS te chamando para as ações do Verão.
+/ = render 'old_page'
 
-          .first_name_field
-            = f.label :first_name, class: @user.errors.include?(:first_name) ? :error : nil
-            = f.text_field :first_name, class: @user.errors.include?(:first_name) ? :error : nil
-            - @user.errors.full_messages_for(:first_name).each do |m|
-              small.error= m
-
-          .last_name_field
-            = f.label :last_name, class: @user.errors.include?(:last_name) ? :error : nil
-            = f.text_field :last_name, class: @user.errors.include?(:last_name) ? :error : nil
-            - @user.errors.full_messages_for(:last_name).each do |m|
-              small.error= m
-
-          .email_field
-            = f.label :email, class: @user.errors.include?(:email) ? :error : nil
-            = f.email_field :email, class: @user.errors.include?(:email) ? :error : nil
-            - @user.errors.full_messages_for(:email).each do |m|
-              small.error= m
-
-          .phone_field
-            = f.label :phone, class: @user.errors.include?(:phone) ? :error : nil
-            = f.phone_field :phone, placeholder: "(21) 994731730", class: @user.errors.include?(:phone) ? :error : nil
-            - @user.errors.full_messages_for(:phone).each do |m|
-              small.error= m
-
-          = f.submit "Quero apoiar!"
-
-.row
-  .text
-    .box
-      h2 Queremos 100% de saneamento para o Rio! Nossas demandas são:
-  
-      h3 Revogação do decreto 25.997/2000, que dá super-poderes ao presidente da Cedae.
-      p No ano 2000, o então governador Anthony Garotinho editou um decreto que autoriza o presidente da Cedae a aumentar as tarifas de água e esgoto de acordo com os gastos da empresa, sem a necessidade de autorização de um órgão regulador. Isso faz com que a conta de água e esgoto aumente mais do que o IPCA (Índice Nacional de Preços ao Consumidor Amplo). Isso tem que acabar! O presidente da Cedae não pode ter esse poder!
-  
-      h3 Regulação da Cedae antes do fim do mandato.
-      p O governador Sergio Cabral editou um decreto no fim do ano passado dizendo que a Cedae passará a agir sob a fiscalização de uma agência reguladora apenas em agosto de 2015. Com isso, Cabral joga para seu sucessor a batata quente. Como a agência que fiscalizará a Cedae já existe, esse prazo deve ser muito menor!
-  
-      h3 Investimento do PAC 2 para saneamento na Rocinha.
-      p Dos R$ 1,6 bilhão previstos para o PAC 2 da Rocinha, quase metade (700 milhões) serão gastos na implementação de um teleférico, obra que, de acordo com os moradores, não é uma prioridade para a comunidade. Queremos que esse dinheiro seja investido em saneamento básico: a grande necessidade da Rocinha. 
-  
-      h3 Pedido de descongelamento de todas as ações movidas contra a Cedae.
-      p Uma decisão do STJ congelou todas as ações movidas contra a Cedae na Justiça. Só em 2012, foram mais de 34 mil. O que se diz é que, se todos os processos fossem quitados em um curto espaço de tempo, a empresa iria à falência. A opção de recorrer à Justiça é um direito constitucional e não pode ser revogado! 
-  
-      h3 Fim da cobrança de esgoto pra quem não tem esgoto.
-      p Parece piada, mas é verdade. A Cedae cobra taxa de esgoto até de quem vive em áreas onde não há rede coletora de esgoto. É ou não é uma cara de pau? 
-      
-      h3 Elaboração e divulgação de um cronograma com metas para implementação de saneamento em favelas.
-      p Em 2007 a Prefeitura assinou um convênio com o Governo do Estado no qual assumia a responsabilidade pelo saneamento básico da maior parte parte da Zona Oeste e de todas as favelas do Rio. No entanto, quando Eduardo Paes tomou posse em 2009, ele simplesmente se recusou em assumir sua responsabilidade em relação ao saneamento básico das favelas. Finalmente, há algumas semanas o secretário municipal de obras, Alexandre Pinto, admitiu a responsabilidade da prefeitura no saneamento das favelas do Rio durante uma audiência pública na Câmara dos Vereadores. Agora que já temos definido quem é a responsável queremos a elaboração e divulgação de um cronograma de implementação do esgoto em favelas.
+.slide-1
+  .row
+    .header
+      = link_to image_tag("meu-rio-logo.png"), "http://meurio.org.br/"
+      | Verão do Saneamento
+  .row
+    .content
+      .image= image_tag "vds.png"
+      .weeks
+        .number 12
+        .copy semanas
+      .views
+        .number 75
+        .copy aparições na mídia nacional e internacional
+  .row
+    .title-ribbon Veja como, na estação mais quente do ano, 1200 cariocas pautaram o cocô.

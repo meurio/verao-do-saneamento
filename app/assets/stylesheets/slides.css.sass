@@ -1,0 +1,78 @@
+// Colors
+$dark-yellow: #fccb4f
+$yellow: #ffeca9
+$gray: #565757
+$red: #d03221
+
+// Font sizes
+// texto corrido: 20pt
+// texto botão: 20pt
+// título da faixa: 30pt
+
+[class^="slide-"]
+  +grid-column(12)
+  padding: 2em 0
+
+.slide-1  
+  background: asset-url("bg.jpg") top center repeat-x #b88316
+  padding: 0 0 6em 0
+  .header
+    text-align: center
+    font-size: 1.5em
+    font-weight: 700
+    padding: .5em 0
+    margin-bottom: 1.5em
+    color: white
+    opacity: .4
+    img
+      margin-right: .5em
+  .content, .title-ribbon
+    +grid-column(10, $center: true)
+  .content
+    .image
+      +grid-column(4)
+    .weeks, .views
+      +grid-column(8)
+      text-align: left
+      margin-bottom: 1em
+      .number
+        background: url('header_small_ribbon.png') center top no-repeat
+        display: inline-block
+        margin-top: 10px
+        color: $dark-yellow
+        text-align: center
+        font-weight: 800
+        font-size: 3em
+        padding-top: 2px
+        width: 158px
+        height: 50px
+      .copy
+        padding-left: 1em
+        position: absolute
+        font-size: 1.8em
+        display: inline
+        color: $yellow
+        margin-top: 5px
+    .weeks
+      padding-top: 4em
+      .copy
+        margin-top: 20px
+  .title-ribbon
+    background: url('header_large_ribbon.png') center top no-repeat
+    background-size: 100% 100%
+    color: $dark-yellow
+    text-align: center
+    font-weight: 700
+    margin-top: 2em
+    font-size: 1.8em
+    padding: .2em 4em
+    min-height: 50px
+    line-height: 1.2em
+
+@media (max-width: 800px)
+  .slide-1
+    .content
+      .image, .weeks, .views
+        +grid-column(12)
+    .title-ribbon
+      padding: .2em 1em

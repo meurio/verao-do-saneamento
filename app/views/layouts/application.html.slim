@@ -10,12 +10,6 @@ html
     meta name="og:image"        content="http://i.imgur.com/eDMVOcF.png"
     meta name="og:description"  content="Existem coisas mais assustadoras na praia do que o cara do abacaxi."
     meta name="og:url"          content=request.url
-  body
-    header
-      .row
-        .meurio
-          = link_to image_tag("meurio.png"), "http://meurio.org.br/"
-          | Verão do Saneamento
-
+  body    
     = yield
     = javascript_include_tag "application", "data-turbolinks-track" => true
