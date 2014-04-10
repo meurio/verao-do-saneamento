@@ -22,7 +22,7 @@ describe User do
 
   describe "#mailchimp_sync" do
     context "when Gibbon raises an exception" do
-      before { allow(Gibbon::API).to receive_message_chain(:new, :lists, :subscribe).and_raise('my stubbed exception') }
+      before { Gibbon::API.stub_chain(:new, :lists, :subscribe).and_raise('my stubbed exception') }
       it "should log the exception output" do
         expect(Rails.logger).to receive(:info).with('my stubbed exception')
         subject.send(:mailchimp_sync)
