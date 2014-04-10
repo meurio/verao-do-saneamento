@@ -1,5 +1,4 @@
 / = render 'old_page'
 
-= render 'slide_1'
-= render 'slide_2'
-= render 'slide_3'
+- (1..4).each do |i|
+  = render "slide_#{i}"

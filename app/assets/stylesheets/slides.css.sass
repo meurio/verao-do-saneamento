@@ -13,20 +13,23 @@ $title-size: 30px
   padding: 3em 0 2em 0
   text-align: center
   .content
-    +grid-column(10, $center: true)
+    p, h2.title
+      +grid-column(10, $center: true)
+    .smaller
+      +grid-column(8, $center: true)
 
-#slide-2
+#slide-2, #slide-4
   background: $red
 #slide-3
   background: $gray
 
 h2.title
   font-family: 'Proxima Nova Soft'
-  background-size: 100% 100%
+  background-size: 100% 100% !important
   font-size: $title-size
   font-weight: bold
   color: $dark-yellow
-  padding: .5em 0
+  padding: .2em 0
   &.red
     background: url('red_ribbon.png') center center no-repeat
   &.gray
@@ -43,6 +46,10 @@ a.cta
   font-size: $text-size !important
   font-weight: bold !important
   padding: .5em 2em
+
+iframe.gmaps
+  width: 100%
+  height: 480px
 
 #slide-1  
   background: asset-url("bg.jpg") top center repeat-x #b88316
@@ -105,5 +112,5 @@ a.cta
     .content
       .image, .weeks, .views
         +grid-column(12)
-    .title-ribbon
+    .main-ribbon
       padding: .2em 1em
