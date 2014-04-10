@@ -1,7 +1,9 @@
 require 'spec_helper'
 
 describe User do
-  before { Gibbon::API.stub(:new).and_return(double(lists: double(subscribe: true))) }
+  before { 
+    allow(Gibbon::API).to receive(:new).and_return(double(lists: double(subscribe: true)))
+  }
   before { User.make! }
 
   it { should validate_presence_of :first_name }
@@ -20,9 +22,9 @@ describe User do
 
   describe "#mailchimp_sync" do
     context "when Gibbon raises an exception" do
-      before { Gibbon::API.stub_chain(:new, :lists, :subscribe).and_raise("my stubed exception") }
+      before { allow(Gibbon::API).to receive_message_chain(:new, :lists, :subscribe).and_raise('my stubbed exception') }
       it "should log the exception output" do
-        Rails.logger.should_receive(:info).with("my stubed exception")
+        expect(Rails.logger).to receive(:info).with('my stubbed exception')
         subject.send(:mailchimp_sync)
       end
     end
