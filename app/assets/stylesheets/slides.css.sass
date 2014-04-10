@@ -5,24 +5,42 @@ $gray: #565757
 $red: #d03221
 
 // Font sizes
-$default-text: 20px
-// texto botão: 20pt
-// título da faixa: 30pt
+$text-size: 20px
+$title-size: 30px
 
 [id^="slide-"]
   +grid-column(12)
   padding: 3em 0 2em 0
   text-align: center
+  .content
+    +grid-column(10, $center: true)
+
+#slide-2
+  background: $red
+#slide-3
+  background: $gray
+
+h2.title
+  font-family: 'Proxima Nova Soft'
+  background-size: 100% 100%
+  font-size: $title-size
+  font-weight: bold
+  color: $dark-yellow
+  padding: .5em 0
+  &.red
+    background: url('red_ribbon.png') center center no-repeat
+  &.gray
+    background: url('gray_ribbon.png') center center no-repeat
 
 p
-  font-size: $default-text   
+  font-size: $text-size
   text-align: center
   color: $yellow
   line-height: 1.2em
-  margin-bottom: 2em
+  margin: 1em 0
 
 a.cta
-  font-size: 1.3em !important
+  font-size: $text-size !important
   font-weight: bold !important
   padding: .5em 2em
 
@@ -39,7 +57,7 @@ a.cta
     opacity: .4
     img
       margin-right: .5em
-  .content, .title-ribbon
+  .content, .main-ribbon
     +grid-column(10, $center: true)
   .content
     .image
@@ -70,7 +88,7 @@ a.cta
       padding-top: 4em
       .copy
         margin-top: 20px
-  .title-ribbon
+  .main-ribbon
     background: url('header_large_ribbon.png') center top no-repeat
     background-size: 100% 100%
     color: $dark-yellow
@@ -81,12 +99,6 @@ a.cta
     padding: .2em 4em
     min-height: 50px
     line-height: 1.2em
-
-#slide-2
-  background: $red
-  .content
-    +grid-column(10, $center: true)
-   
 
 @media (max-width: 800px)
   #slide-1
