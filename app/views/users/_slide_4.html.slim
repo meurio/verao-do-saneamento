@@ -1,6 +1,6 @@
 #slide-4
   .row
-    .content
+    .content.large
       = image_tag 'photos/meme_horario_de_verao.jpg'
       = image_tag 'photos/coco.jpg'
 
@@ -25,5 +25,5 @@
       p
         iframe.gmaps src="https://mapsengine.google.com/map/u/0/embed?mid=zV7GAzxvQdnE.kaK_rhNHWeFU"
 
-      p.smaller Veja abaixo o resumo ilustrado das ações que pautaram o verão ou saiba como agir agora por cada demanda.
+      p.small Veja abaixo o resumo ilustrado das ações que pautaram o verão #{content_tag :strong, "ou saiba como agir agora por cada demanda.", class: :dark}
 

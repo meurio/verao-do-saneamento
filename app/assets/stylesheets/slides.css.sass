@@ -12,18 +12,20 @@ $title-size: 30px
   +grid-column(12)
   padding: 3em 0 2em 0
   text-align: center
-  .content
-    p, h2.title
-      +grid-column(10, $center: true)
-    .smaller
-      +grid-column(8, $center: true)
+  .large > p, p.large
+    +grid-column(12)
+  .medium > p, p.medium
+    +grid-column(10, $center: true)
+  .small > p, p.small
+    +grid-column(8, $center: true)
 
 #slide-2, #slide-4
   background: $red
-#slide-3
+#slide-3, #slide-5
   background: $gray
 
 h2.title
+  +grid-column(10, $center: true)
   font-family: 'Proxima Nova Soft'
   background-size: 100% 100% !important
   font-size: $title-size
@@ -41,6 +43,7 @@ p
   color: $yellow
   line-height: 1.2em
   margin: 1em 0
+  float: none !important
 
 a.cta
   font-size: $text-size !important
@@ -50,6 +53,27 @@ a.cta
 iframe.gmaps
   width: 100%
   height: 480px
+
+.both.image-left
+  display: table
+  img
+    width: 50%
+    float: left
+    margin-right: 1em
+  p 
+    text-align: left
+    margin-right: 0
+
+#wp-print p
+  margin-top: 2em
+
+#championship
+  margin-top: 3em
+  +grid-column(10, $center: true)
+
+.dark
+  color: $dark-yellow
+  font-weight: bold
 
 #slide-1  
   background: asset-url("bg.jpg") top center repeat-x #b88316
