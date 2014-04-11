@@ -19,7 +19,7 @@ $title-size: 30px
   .small > p, p.small
     +grid-column(8, $center: true)
 
-#slide-2, #slide-4
+#slide-2, #slide-4, #slide-6
   background: $red
 #slide-3, #slide-5
   background: $gray
@@ -44,6 +44,9 @@ p
   line-height: 1.2em
   margin: 1em 0
   float: none !important
+  &.big
+    font-size: 1.8em
+    line-height: 1.2em
 
 a.cta
   font-size: $text-size !important
@@ -71,9 +74,20 @@ iframe.gmaps
   margin-top: 3em
   +grid-column(10, $center: true)
 
+#joatinga
+  img
+    width: 335px
+
 .dark
   color: $dark-yellow
   font-weight: bold
+
+.highlight
+  h3
+    +grid-column(6, $center: true)
+    color: white
+    font-size: 4em
+    font-weight: bold
 
 #slide-1  
   background: asset-url("bg.jpg") top center repeat-x #b88316
