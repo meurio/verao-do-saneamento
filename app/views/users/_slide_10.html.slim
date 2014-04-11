@@ -8,4 +8,4 @@
       p Ajude a homenageá-los e a inspirar outras pessoas compartilhando essa história com os seus amigos.
 
       = link_to "Compartilhe no Facebook", "https://www.facebook.com/sharer/sharer.php?u=#{URI::encode(root_url)}", class: [:button, :radius, :cta, :facebook_share]
-      = link_to "Compartilhe no Twitter", "https://twitter.com/share?url=#{URI::encode(URI::encode(root_url))}", class: [:button, :radius, :cta, :twitter_share]
+      = link_to "Compartilhe no Twitter", "https://twitter.com/share?url=#{URI::encode(root_url)}&text=#{URI::encode('Privadas, caveiras e bactérias no verão. Muito bom!')}&hashtags=#{URI::encode('verãodosaneamento')}", class: [:button, :radius, :cta, :twitter_share]
