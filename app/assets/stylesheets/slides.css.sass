@@ -23,7 +23,7 @@ $title-size: 30px
 
 #slide-2, #slide-4, #slide-6, #slide-8, #slide-10
   background: $red
-#slide-3, #slide-5, #slide-7, #slide-9
+#slide-3, #slide-5, #slide-7, #slide-9, #slide-11
   background: $gray
 
 h2.title
@@ -58,6 +58,10 @@ a.cta
 iframe.gmaps
   width: 100%
   height: 480px
+
+iframe.youtube
+  width: 100%
+  height: 390px
 
 .both.image-left
   display: table
@@ -99,8 +103,13 @@ a.facebook_share
   margin-right: 1em
 a.twitter_share
   background: $twitter-blue
+a.external_link
+  color: $dark-yellow
+  text-decoration: underline
+  &:hover
+    text-decoration: none
 
-#slide-1  
+#slide-1
   background: asset-url("bg.jpg") top center repeat-x #b88316
   padding: 0 0 6em 0
   .header
@@ -155,6 +164,9 @@ a.twitter_share
     padding: .2em 4em
     min-height: 50px
     line-height: 1.2em
+
+#slide-11
+  padding-bottom: 10em
 
 @media (max-width: 800px)
   #slide-1
