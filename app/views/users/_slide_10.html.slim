@@ -1,0 +1,11 @@
+#slide-10
+  .row
+    .content.large
+      h2.title.gray O poder da rede
+
+      p A realização das ações e a enorme repercussão da mobilização só foi possível com a participação dos incríveis voluntários que levaram a causa pra rua e de quem espalhou as ações nas redes.
+
+      p Ajude a homenageá-los e a inspirar outras pessoas compartilhando essa história com os seus amigos.
+
+      = link_to "Compartilhe no Facebook", "https://www.facebook.com/sharer/sharer.php?u=#{URI::encode(root_url)}", class: [:button, :radius, :cta, :facebook_share]
+      = link_to "Compartilhe no Twitter", "https://twitter.com/share?url=#{URI::encode(URI::encode(root_url))}", class: [:button, :radius, :cta, :twitter_share]

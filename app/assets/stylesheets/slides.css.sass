@@ -3,6 +3,8 @@ $dark-yellow: #fccb4f
 $yellow: #ffeca9
 $gray: #565757
 $red: #d03221
+$facebook-blue: #3d5a9b
+$twitter-blue: #25bce8
 
 // Font sizes
 $text-size: 20px
@@ -19,7 +21,7 @@ $title-size: 30px
   .small > p, p.small
     +grid-column(8, $center: true)
 
-#slide-2, #slide-4, #slide-6, #slide-8
+#slide-2, #slide-4, #slide-6, #slide-8, #slide-10
   background: $red
 #slide-3, #slide-5, #slide-7, #slide-9
   background: $gray
@@ -91,6 +93,12 @@ iframe.gmaps
 
 .choose-a-mobilization
   margin-top: 4em
+
+a.facebook_share
+  background: $facebook-blue
+  margin-right: 1em
+a.twitter_share
+  background: $twitter-blue
 
 #slide-1  
   background: asset-url("bg.jpg") top center repeat-x #b88316
