@@ -10,6 +10,21 @@ html
     meta name="og:image"        content=image_url("facebook_thumb.jpg")
     meta name="og:description"  content="Privadas nas praias e bactérias bombaram o assunto que ninguém quer falar."
     meta name="og:url"          content=request.url
-  body    
+  body
+    #fb-root
+      javascript:
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123808244477389";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        
     = yield
     = javascript_include_tag "application", "data-turbolinks-track" => true
+    
+    footer
+      .row
+        #fb-share
+          <div class="fb-like" data-href="https://www.facebook.com/meurio" data-width="340" data-show-faces="true" data-send="false" data-colorscheme="dark"></div>

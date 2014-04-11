@@ -1,5 +1,18 @@
 $header-font-family: "Populaire"
 
+// Colors
+$dark-yellow: #fccb4f
+$yellow: #ffeca9
+$gray: #565757
+$gray-highlight: #363636
+$red: #d03221
+$facebook-blue: #3d5a9b
+$twitter-blue: #25bce8
+
+// Font sizes
+$text-size: 20px
+$title-size: 30px
+
 @import fonts
 @import foundation
 @import compass/css3
@@ -15,3 +28,13 @@ body
 .row
   +grid-row
 
+footer
+  background: $gray
+  text-align: left
+  padding: 0 0 6em 0
+  #fb-share
+    +grid-column(8, $center: true)
+
+// @media (max-width: 500px)
+//   #fb-share
+//     +grid-column(10, $center: true)
